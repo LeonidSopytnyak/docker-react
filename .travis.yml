@@ -9,7 +9,7 @@ before_install:
 
 # Script part
 script:
-  - docker run mroldsir/docker-react npm run tests -- --coverage
+  - docker run mroldsir/docker-react npm run test -- --coverage
 
 # Deploy part
 deploy:
