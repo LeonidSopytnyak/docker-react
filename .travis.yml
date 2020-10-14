@@ -1,17 +1,13 @@
-# Main part
 sudo: required
 services:
   - docker
 
-# Pre install part
 before_install:
   - docker build -t mroldsir/docker-react -f Dockerfile.dev .
 
-# Script part
 script:
   - docker run mroldsir/docker-react npm run test -- --coverage
 
-# Deploy part
 deploy:
   provider: elasticbeanstalk
   region: "us-west-2"
